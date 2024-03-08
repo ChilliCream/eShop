@@ -1,0 +1,29 @@
+type Basket {
+  id: ID!
+  product: Product
+  quantity: Int!
+}
+
+type CatalogBrand {
+  id: ID!
+  brand: String!
+}
+
+type CatalogType {
+  id: ID!
+  type: String!
+}
+
+type CatalogItem {
+  id: ID!
+  name: String!
+  description: String
+  price: Float!
+  pictureFileName: String!
+  pictureUri: String!
+  catalogType: CatalogType
+  catalogBrand: CatalogBrand
+  availableStock: Int!
+  restockThreshold: Int!
+  onReorder: Boolean!
+}
